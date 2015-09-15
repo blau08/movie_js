@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/scripts.js"></script>
+    <title>Movie Tickets!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>WANNA SEE A MOVIE?</h1>
+
+      <form id="user-info">
+        <div class="form-group">
+          <label for="chosen-movie">What movie?</label>
+          <div class="dropdown">
+            <button id="dLabel" class="btn btn-danger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Movies
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="movie-list" aria-labelledby="dLabel">
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="chosen-time">What Time do you want to see it?</label>
+          <div class="dropdown">
+            <button id="dLabel" class="btn btn-danger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Time
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="time-list" aria-labelledby="dLabel">
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="user-age">Whats your Age?</label>
+          <input class="form-control" type="text" name="user-age" id="user-age">
+        </div>
+      </form>
+
+      
+
+
+    </div>
+  </body>
+</html>
