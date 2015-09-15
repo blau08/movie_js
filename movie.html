@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Movie Tickets!</title>
   </head>
@@ -14,35 +15,29 @@
 
       <form id="user-info">
         <div class="form-group">
-          <label for="chosen-movie">What movie?</label>
-          <div class="dropdown">
-            <button id="dLabel" class="btn btn-danger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Movies
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" id="movie-list" aria-labelledby="dLabel">
-            </ul>
-          </div>
+          <select class="form-control" id="movie-list" placeholder="Movie Title">
+            <option value="">Select Movie</option>
+          </select>
         </div>
+
         <div class="form-group">
-          <label for="chosen-time">What Time do you want to see it?</label>
-          <div class="dropdown">
-            <button id="dLabel" class="btn btn-danger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Time
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" id="time-list" aria-labelledby="dLabel">
-            </ul>
-          </div>
+          <select class="form-control" id="time-list">
+            <option value="">Select Time</option>
+          </select>
         </div>
+
         <div class="form-group">
-          <label for="user-age">Whats your Age?</label>
-          <input class="form-control" type="text" name="user-age" id="user-age">
+          <input class="form-control" type="text" name="user-age" id="user-age" placeholder="Enter Age">
         </div>
+
+        <button type="submit" class="btn btn-danger">Find Ticket Price</button>
       </form>
 
-      
+      <div id="result">
+        <h2>Hope you have money!</h2>
 
+        <p>Cause your ticket price is $<span class="ticket-price"></span>.</p>
+      </div>
 
     </div>
   </body>
